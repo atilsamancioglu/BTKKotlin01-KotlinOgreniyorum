@@ -146,5 +146,36 @@ class MainActivity : AppCompatActivity() {
         println(4>3 || 3>5)
 
 
+        //Veri Yapıları
+
+        //Diziler - Array
+
+        println("-------Array-------")
+
+        val stringOrnegi = "atıl"
+
+        val benimDizim = arrayOf(stringOrnegi,"samancıoğlu","zeynep","fatih","osman")
+
+        println(benimDizim[0])
+        println(benimDizim[1])
+        println(benimDizim.last())
+
+        benimDizim[1] = "sam"
+
+        println(benimDizim[1])
+        println(benimDizim.get(3))
+
+        //benimDizim[5] = "yeni eleman"
+        //println(benimDizim[5])
+
+        val numaraDizisi = arrayOf(1,10,20,15,2,4)
+        println(numaraDizisi[3] * 10)
+
+        val karisikDizi = arrayOf(10,3.14,20,"atıl",false,true)
+        println(karisikDizi[2])
+
+
+
+
     }
 }
