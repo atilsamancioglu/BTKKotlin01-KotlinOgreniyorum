@@ -268,5 +268,93 @@ class MainActivity : AppCompatActivity() {
         ornekHashMap.put("abc","def")
 
 
+        println("------- If Kontrolleri ----------")
+
+        println(3 > 5)
+
+        var sayi = 10
+        sayi = sayi + 1
+        println(sayi)
+        sayi++
+        println(sayi)
+        sayi--
+        println(sayi)
+
+        //kalanını bulma - remainder
+        println(10 % 4)
+
+        val skor = 60
+
+        if(skor < 10) {
+            println("oyunu kaybettiniz")
+        } else if (skor >= 10 && skor < 20) {
+            println("oyunda idare eder bir skor aldınız")
+        } else if (skor >= 20 && skor < 30) {
+            println("güzel bir skor elde ettiniz")
+        } else {
+            println("çok güzel bir skor elde ettiniz")
+        }
+
+
+        println("---------When---------")
+
+        val notRakam = 6
+        var notString = ""
+
+        when(notRakam) {
+            0 -> notString = "Geçersiz not"
+            1 -> notString = "Zayıf"
+            2 -> notString = "Kötü"
+            3 -> notString = "Orta"
+            4 -> notString = "İyi"
+            5 -> notString = "Pek iyi"
+            else -> notString = "Böyle bir not bilmiyoruz"
+        }
+
+        println(notString)
+
+
+        println("--------- While Döngüsü ---------")
+
+        var j = 0
+        println("döngü başladı")
+        while (j <= 10) {
+            println(j)
+            j = j + 1
+        }
+        println("döngü bitti")
+
+
+        println("--------- For Döngüsü ---------")
+
+        val baskaDizi = arrayListOf(5,10,15,20,25,30)
+        println(baskaDizi[0] / 5 * 3)
+        println(baskaDizi[1] / 5 * 3)
+
+        println("döngü başladı")
+        for (numara in baskaDizi) {
+            println(numara / 5 * 3)
+        }
+        println("döngü bitti")
+
+        //range
+        for (num in 0..9) {
+            println(num * 10)
+        }
+
+
+        val benimStringDizim = ArrayList<String>()
+        benimStringDizim.add("Atıl")
+        benimStringDizim.add("Zeynep")
+        benimStringDizim.add("Atlas")
+
+        for (kelime in benimStringDizim) {
+            println(kelime.uppercase())
+        }
+
+        benimStringDizim.forEach {
+            println(it.uppercase())
+        }
+
     }
 }
