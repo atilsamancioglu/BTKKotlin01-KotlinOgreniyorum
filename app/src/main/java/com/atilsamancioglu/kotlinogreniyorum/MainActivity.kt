@@ -174,7 +174,98 @@ class MainActivity : AppCompatActivity() {
         val karisikDizi = arrayOf(10,3.14,20,"atıl",false,true)
         println(karisikDizi[2])
 
+        println("-------ArrayList-------")
 
+        val isimListesi = arrayListOf("atıl","samancıoğlu","zeynep")
+
+        println(isimListesi[0])
+        println(isimListesi[1])
+        println(isimListesi[2])
+
+        println(isimListesi.size)
+        isimListesi.add("mahmut")
+        println(isimListesi.get(3))
+        isimListesi[3] = "mehmet"
+        println(isimListesi.get(3))
+
+        //isimListesi.removeAt(3)
+
+        val numaraListesi = arrayListOf<Int>()
+        val digerOrnekListe = ArrayList<Int>()
+
+        numaraListesi.add(10)
+        numaraListesi.add(20)
+        numaraListesi.add(30)
+
+        digerOrnekListe.add(40)
+        digerOrnekListe.add(50)
+        digerOrnekListe.add(60)
+
+        println(numaraListesi[1] * digerOrnekListe[2])
+
+        val karisikListe = arrayListOf(10,3.14,"atıl",true)
+        val karisikBosListe = arrayListOf<Any>()
+        karisikBosListe.add(10)
+        karisikBosListe.add("atıl")
+        karisikBosListe.add(false)
+
+        println(karisikBosListe.get(0))
+
+        println("----------Set----------")
+
+        val ornekDizi = arrayOf(10,10,10,10,20,30,40)
+
+        println(ornekDizi[0])
+        println(ornekDizi[1])
+
+        val ornekSet = setOf(10,10,10,10,20,30,40)
+        println(ornekSet.size)
+
+
+        ornekSet.forEach {
+            println(it)
+        }
+
+        val bosSetOrnegi = HashSet<String>()
+
+        bosSetOrnegi.add("Atıl")
+        bosSetOrnegi.add("Atıl")
+        bosSetOrnegi.add("Atıl")
+        bosSetOrnegi.add("Atıl")
+        bosSetOrnegi.add("Zeynep")
+
+        bosSetOrnegi.forEach {
+            println(it)
+        }
+
+        val ornekTekilSet = ornekDizi.toHashSet()
+        ornekTekilSet.forEach {
+            println(it)
+        }
+
+        println("----------Map---------")
+
+        // Anahtar - Değer Eşleşmesi
+
+        val yemekDizisi = arrayListOf("Elma","Armut","Karpuz")
+        val kaloriDizisi = arrayListOf(100,150,200)
+
+        println("${yemekDizisi[1]}'nın kalorisi ${kaloriDizisi[1]}")
+
+        val yemekKaloriMapi = hashMapOf<String, Int>()
+        yemekKaloriMapi.put("Elma",100)
+        yemekKaloriMapi.put("Armut",150)
+        yemekKaloriMapi.put("Karpuz",200)
+
+        println(yemekKaloriMapi["Elma"])
+        println(yemekKaloriMapi.get("Armut"))
+
+        yemekKaloriMapi.put("Elma",300)
+        println(yemekKaloriMapi.get("Elma"))
+
+        val ornekHashMap = HashMap<String, String>()
+        ornekHashMap.put("atıl","samancıoğlu")
+        ornekHashMap.put("abc","def")
 
 
     }
